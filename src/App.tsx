@@ -1,12 +1,11 @@
 import {Route, Routes } from 'react-router-dom';
-
 import './App.css'
 import SearchPage from './pages/SearchPage'
 import BookmarkPage from './pages/BookmarkPage'
 import Navigation from './components/Navigation/Navigation'
 import { BookmarkProvider } from './contexts/BookmarkContext';
 import AppStyle from './components/AppStyle/AppStyle';
-
+import BackToTopButton from './components/BackToTop/BackToTop';
 
 function App() {
 
@@ -22,7 +21,7 @@ function App() {
                 <Route path='/bookmarks' element={<BookmarkPage/>}/>
                 </Routes>
               </main>
-              {/* <div><img src="/src/assets/wave.png" alt="footer visual" className="footerImage" /></div> */}
+              <BackToTopButton />
           </div>
     </BookmarkProvider>
     </>

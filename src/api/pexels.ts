@@ -42,7 +42,6 @@ export const searchPexelsImages = async ({
     return response.data;
 
   } catch (error: any) {
-    // Enhanced error handling for Axios
     if (axios.isAxiosError(error)) { 
       const axiosError = error as AxiosError;
       console.error(`Pexels API Error: ${axiosError.response?.status} ${axiosError.response?.statusText}`);

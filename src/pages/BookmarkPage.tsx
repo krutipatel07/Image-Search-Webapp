@@ -1,5 +1,4 @@
-// src/pages/BookmarksPage.tsx
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { useBookmarks } from '../hooks/useBookmarks';
 import ImageGrid from '../components/ImageGrid/ImageGrid';
 import Modal from '../components/Modal/Modal';
@@ -20,9 +19,7 @@ function BookmarksPage() {
 
   const hasBookmarks = folders.some((folder:string) => bookmarks[folder]?.length > 0);
 
-    // get all bookmarks into a single array
     const allBookmarkedItems: Bookmark[] = Object.values(bookmarks).flat() as Bookmark[];
-    // Then find the specific bookmark for the modal
     const findBookmarkInfo = (photoId: number): Bookmark | undefined => {
       return allBookmarkedItems.find(bm => bm.id === photoId);
     };

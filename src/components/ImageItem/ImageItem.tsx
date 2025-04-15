@@ -9,7 +9,6 @@ interface ImageItemProps {
 
 // Performance Optimization: Lazy loading and low-quality placeholder
 const ImageItem: React.FC<ImageItemProps> = ({ photo, onClick }) => {
-  // Choose a smaller source for the grid preview to improve load time
   const previewSrc = photo.src.medium || photo.src.small || photo.src.original; //
 
   return (

@@ -13,7 +13,6 @@
     overflow-y: auto;
   }
 
-  /* Modal content box */
   .modalContent {
     background-color: white;
     border-radius: 8px;

@@ -36,7 +36,7 @@ function SearchPage() {
     },
     initialPageParam: 1,
     enabled: !!searchTerm,
-    staleTime: 1000 * 60 * 10, // Keep search results fresh for 10 mins
+    staleTime: 1000 * 60 * 10, 
   });
 
   // const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,7 +52,6 @@ function SearchPage() {
     
   };
 
-   // Flatten the pages array for rendering
   const allPhotos = data?.pages.flatMap(page => page.photos) ?? [];
 
   const handleImageClick = useCallback((photo: PexelsPhoto) => {
@@ -87,12 +86,8 @@ function SearchPage() {
       </div>
       <div className={pageStyles.imageGallary}>
 
-      
-
-
       {status === 'pending' && searchTerm && <Loader message="Searching..." />}
       {status === 'error' && <p className={pageStyles.errorMessage}>Error: {error.message}</p>}
-
       {status === 'success' && !allPhotos.length && searchTerm && (
         <p className={pageStyles.noResultsMessage}>No results found for "{searchTerm}".</p>
       )}
@@ -118,7 +113,6 @@ function SearchPage() {
             <ImageGrid photos={allPhotos} onImageClick={handleImageClick} />
         </InfiniteScroll>
       )}
-
 
       {selectedPhoto && (
         <Modal

@@ -10,10 +10,9 @@ export interface BookmarkContextType {
   removeBookmark: (photoId: number) => void;
   isBookmarked: (photoId: number) => Bookmark | undefined;
   createFolder: (folderName: string) => void;
-  // Optional: moveBookmark: (photoId: number, newFolder: string) => void;
 }
 
-// Helper to load from localStorage
+// load from localStorage
 const loadBookmarksFromStorage = (): BookmarkCollection => {
   try {
     const storedBookmarks = localStorage.getItem(BOOKMARKS_STORAGE_KEY);
@@ -62,7 +61,6 @@ export const BookmarkProvider: React.FC<BookmarkProviderProps> = ({ children }) 
 
 
   const addBookmark = useCallback((photo: PexelsPhoto, folder: string) => {
-    // Ensure the target folder exists
     const targetFolder = folder || DEFAULT_FOLDER_NAME;
      if (!bookmarks[targetFolder]) {
         console.warn(`Target folder "${targetFolder}" not found, creating it.`);
@@ -72,12 +70,10 @@ export const BookmarkProvider: React.FC<BookmarkProviderProps> = ({ children }) 
         const newBookmark: Bookmark = { ...photo, folder: targetFolder };
         const updatedCollection = { ...prev };
 
-         // Ensure folder array exists before pushing
          if (!updatedCollection[targetFolder]) {
              updatedCollection[targetFolder] = [];
          }
 
-        // Avoid adding duplicates within the same folder
         if (!updatedCollection[targetFolder].some(bm => bm.id === photo.id)) {
              updatedCollection[targetFolder] = [...updatedCollection[targetFolder], newBookmark];
         } else {

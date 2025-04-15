@@ -1,4 +1,3 @@
-/* General styles for page content */
 .pageContainer {
     padding: 1.5rem 2rem;
     max-width: 1600px;
@@ -7,7 +6,6 @@
   }
 
 
-  /* Page heading style */
   .pageContainer h1 {
       margin: 0 0 1rem 0; 
       color: #495057; 
@@ -37,7 +35,6 @@
     position: relative;
   }
 
-  /* Search bar container */
   .searchBar {
     position: relative;
     width: 100%;
@@ -45,7 +42,6 @@
     margin: 2rem 0;
   }
 
-  /* Search input field styling */
   .searchInput {
     padding: 12px 18px 12px 40px;
     width: 100%;
@@ -104,12 +100,10 @@
     font-weight: 500;
   }
 
-  /* Styling for sections on the Bookmarks page */
   .bookmarkSection {
       margin-bottom: 3rem;
   }
 
-  /* Folder heading style on Bookmarks page */
   .bookmarkSection h2 {
       margin-bottom: 1rem;
       color: #495057; 
@@ -136,9 +130,7 @@
       color: #95a5a6; 
   }
 
-
-
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .pageContainer h1 {
         font-size: 2rem;
     }

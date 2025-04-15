@@ -37,13 +37,13 @@ const Modal: React.FC<ModalProps> = ({ photo, onClose, bookmarkInfo }) => {
     }
 
     addBookmark(photo, folderToAdd);
-    // Optional: Close modal after adding?
+    //Close modal after adding?
     // onClose();
   };
 
   const handleRemoveBookmark = () => {
     removeBookmark(photo.id);
-    // Optional: Close modal after removing?
+    //Close modal after removing?
     // onClose();
   };
 
@@ -69,7 +69,7 @@ const Modal: React.FC<ModalProps> = ({ photo, onClose, bookmarkInfo }) => {
 
 
   return (
-    <div className={styles.modalOverlay} onClick={onClose}>
+    <div className={styles.modalOverlay}>
       <div className={styles.modalContent} onClick={handleContentClick}>
         <button className={styles.closeButton} onClick={onClose} aria-label="Close modal">
           &times; {}
@@ -90,10 +90,8 @@ const Modal: React.FC<ModalProps> = ({ photo, onClose, bookmarkInfo }) => {
           <p className={styles.pexelsLink}>
               View on <a href={photo.url} target="_blank" rel="noopener noreferrer">Pexels</a>
           </p>
-          {/* Dimensions, etc. can be added here */}
           <p>Dimensions: {photo.width} x {photo.height}</p>
 
-          {/* --- Bookmark Controls --- */}
           <div className={styles.bookmarkControls}>
             {bookmarkInfo ? (
                <>
