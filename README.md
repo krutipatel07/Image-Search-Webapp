@@ -4,11 +4,11 @@ A web application that allows users to search for images using the Pexels API, v
 
 ## Contents
 * [Features](#Features)
-* [Technology Stack](#Technology Stack)
+* [Technology Stack](#technology-stack)
 * [Prerequisites](#Prerequisites)
-* [Environment Variables](#Environment Variables)
+* [Environment Variables](#environment-variables)
 * [Installation](#Installation)
-* [Running the Application](#Running the Application)
+* [Running the Application](#running-the-application)
 * [Screenshots](#ScreenShots)
 * [Credits](#Credits)
 
