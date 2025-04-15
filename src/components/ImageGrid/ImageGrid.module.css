@@ -1,0 +1,28 @@
+.imageGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem; 
+    padding: 1rem 0; 
+  }
+  
+  /* Adjust minimum column width for larger screens for better layout */
+  @media (min-width: 600px) {
+    .imageGrid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .imageGrid {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  
+  .noImagesMessage {
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+      font-style: italic;
+  }

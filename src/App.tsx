@@ -1,33 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {Route, Routes } from 'react-router-dom';
+
 import './App.css'
+import SearchPage from './pages/SearchPage'
+import BookmarkPage from './pages/BookmarkPage'
+import Navigation from './components/Navigation/Navigation'
+import { BookmarkProvider } from './contexts/BookmarkContext';
+import AppStyle from './components/AppStyle/AppStyle';
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <BookmarkProvider>
+          <div className="app-container">
+          <AppStyle/>
+              <Navigation/>
+              <main className="main-content">
+                <Routes>
+                <Route path='/' element={<SearchPage/>}/>
+                <Route path='/bookmarks' element={<BookmarkPage/>}/>
+                </Routes>
+              </main>
+              {/* <div><img src="/src/assets/wave.png" alt="footer visual" className="footerImage" /></div> */}
+          </div>
+    </BookmarkProvider>
     </>
   )
 }
