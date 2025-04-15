@@ -4,13 +4,13 @@ A web application that allows users to search for images using the Pexels API, v
 
 ## Contents
 * [Features](#Features)
-* [Technology Stack](#TechnologyStack)
+* [Technology Stack](#Technology Stack)
 * [Prerequisites](#Prerequisites)
-* [Environment Variables](#EnvironmentVariables)
+* [Environment Variables](#Environment Variables)
 * [Installation](#Installation)
-* [Running the Application](#RunningtheApplication)
+* [Running the Application](#Running the Application)
 * [Screenshots](#ScreenShots)
-* [License](#License)
+* [Credits](#Credits)
 
 ## Features
 
@@ -75,9 +75,9 @@ This project requires a Pexels API key to function.
 2.  Open your web browser and go to the local URL provided (usually `http://localhost:5173` or similar).
 
 ## ScreenShots
-![Image Search Web app](/assets/SearchPage.png)
-![Image Search Web app](/assets/AddtoFolder-Bookmark.png)
-![Image Search Web app](/assets/SavedBookmarks.png)
+![Image Search Web app](/src/assets/SearchPage.png)
+![Image Search Web app](/src/assets/AddtoFolder-Bookmark.png)
+![Image Search Web app](/src/assets/savedBookmarks.png)
 
 ## Credits
 * Coded by Kruti Patel.
