@@ -1,5 +1,4 @@
-// src/pages/SearchPage.tsx
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { FaSearch  } from 'react-icons/fa';
@@ -24,8 +23,6 @@ function SearchPage() {
     error,
     fetchNextPage,
     hasNextPage,
-    isFetching,
-    isFetchingNextPage,
     status, 
   } = useInfiniteQuery({
     queryKey: ['pexelsSearch', searchTerm ],
