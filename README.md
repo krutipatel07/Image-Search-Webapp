@@ -28,9 +28,9 @@ A web application that allows users to search for images using the Pexels API, v
 * **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
 * **Axios:** A promise-based HTTP client for making API requests (used for Pexels API).
 * **CSS Modules:** CSS files where names are scoped locally to avoid conflicts.
-* **TanStack Query (React Query):** Library for fetching, caching, and managing server state (likely used for Pexels API calls).
-* **React Context API:** React structure for sharing state across components without prop drilling (likely used for bookmarks).
-* **LocalStorage:** Browser storage for persisting data locally (likely used for saving bookmarks).
+* **TanStack Query (React Query):** Library for fetching, caching, and managing server state (used for Pexels API calls).
+* **React Context API:** React structure for sharing state across components without prop drilling (used for bookmarks).
+* **LocalStorage:** Browser storage for persisting data locally (used for saving bookmarks).
 
 ## Prerequisites
 
